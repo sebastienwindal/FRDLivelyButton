@@ -17,7 +17,7 @@ It probably will work with iOS 6, I have not tried but AFAIK it is not using any
 
 ### CocoaPods
 
-`pod 'FRDLivelyButton', '~> 1.0'`
+`pod 'FRDLivelyButton', '~> 1.0.0'`
 
 ### Manual
 
