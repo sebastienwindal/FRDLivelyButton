@@ -29,7 +29,7 @@ Add a FRDLivelyButton either in code or using interface builder.
 
 Example, how to add a ```FRDLivelyButton``` in a nav bar:
 
-```objc
+``` objc
 FRDLivelyButton *button = [[FRDLivelyButton alloc] initWithFrame:CGRectMake(0,0,36,28)];
 [button setStyle:kFRDLivelyButtonStyleHamburger animated:NO];
 [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -39,13 +39,13 @@ self.navigationItem.rightBarButtonItem = buttonItem;
 
 To change the button style, just call ```setStyle:animated```:
 
-```
+``` objc
 [self.myButton setStyle:kFRDLivelyButtonStyleCircleClose animated:YES];
 ```
 
 The current type of the button can be accessed using the buttonStyle property:
 
-```objc
+``` objc
 - (IBAction)buttonAction:(FRDLivelyButton *)sender
 {
     if (sender.buttonStyle == kFRDLivelyButtonStylePlus) {
@@ -64,7 +64,7 @@ See FRDLivelyButton.h for list of possible attributes.
 
 Example:
 
-```objc
+``` objc
 [button setOptions:@{ kFRDLivelyButtonLineWidth: @(2.0f),
                       kFRDLivelyButtonHighlightedColor: [UIColor colorWithRed:0.5 green:0.8 blue:1.0 alpha:1.0],
                       kFRDLivelyButtonColor: [UIColor blueColor]
