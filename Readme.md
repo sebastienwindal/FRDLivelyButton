@@ -1,8 +1,9 @@
 # FRDLivelyButton
 
 `FRDLivelyButton` is a simple UIButton subclass intended to be used inside a UIBarButtonItem,
-even though it can be used anywhere you can use a UIButton. It is entirely Core Graphics driven,
-and it supports 5 possible common types used in navigation bar.
+even though it can be used anywhere you can use a UIButton. 
+It is entirely Core Graphics driven, supports 5 common button types (menu, close, add, etc...)
+used in navigation bar, and will nicely animate any button type changes and touch events.
 
 ![demo](images/screenshot.gif)
 
@@ -10,9 +11,7 @@ and it supports 5 possible common types used in navigation bar.
 
 `FRDLivelyButton` uses ARC and requires iOS 7.0+.
 
-It could probably be used in iOS 6, I have not tried but I is not using any iOS7 specific APIs..
-
-Works for iPhone and iPad.
+It probably will work with iOS 6, I have not tried but AFAIK it is not using any iOS7 specific APIs.
 
 ## Installation
 
@@ -26,28 +25,50 @@ Copy the folder `FRDLivelyButton` to your project.
 
 ## Usage
 
-Add a FRDLivelyButton either in code or using interface builder:
+Add a FRDLivelyButton either in code or using interface builder.
+
+Example, how to add a ```FRDLivelyButton``` in a nav bar:
 
 ```
-// in code 
+FRDLivelyButton *button = [[FRDLivelyButton alloc] initWithFrame:CGRectMake(0,0,36,28)];
+[button setStyle:kFRDLivelyButtonStyleHamburger animated:NO];
+[button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+self.navigationItem.rightBarButtonItem = buttonItem;
 ```
 
-To change the button style, just called:
+To change the button style, just call ```setStyle:animated```:
 
 ```
+[self.myButton setStyle:kFRDLivelyButtonStyleCircleClose animated:YES];
+```
+
+The current type of the button can be accessed using the buttonStyle property:
 
 ```
+- (IBAction)buttonAction:(FRDLivelyButton *)sender
+{
+    if (sender.buttonStyle == kFRDLivelyButtonStylePlus) {
+    	// logic
+    } else ....
+}
+```
+
 
 ## Customizing Appearance
 
-Basic button style can be defines using an option NSDictionary, those include colors, animation durations, etc...
+Button appearance and behavior can be customized using an options NSDictionary. Color, highlighted color, line thickness, animation 
+durations, etc... can be customized. Default should work just fine though.
 
 See FRDLivelyButton.h for list of possible attributes.
 
 Example:
 
 ```
-
+[button setOptions:@{ kFRDLivelyButtonLineWidth: @(2.0f),
+                      kFRDLivelyButtonHighlightedColor: [UIColor colorWithRed:0.5 green:0.8 blue:1.0 alpha:1.0],
+                      kFRDLivelyButtonColor: [UIColor blueColor]
+                      }];
 ```
 
 
