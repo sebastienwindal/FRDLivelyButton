@@ -358,7 +358,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
                                 (__bridge id) layer.path,
                                 (id) CFBridgingRelease(scaledUpPath),
                                 (id) CFBridgingRelease(scaledDownPath),
-                                (id) CFBridgingRelease(finalPath)
+                                (__bridge id) finalPath
                            ];
         NSArray *times = @[ @(0.0), @(0.85), @(0.93), @(1.0) ];
         
