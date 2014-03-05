@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.screenshots  = "http://github.com/sebastienwindal/FRDLivelyButton/blob/master/images/screenshot.gif"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Sebastien Windal" => "sebastien@windal.net" }
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.1'
   s.source = { :git => "https://github.com/sebastienwindal/FRDLivelyButton.git",
                :tag => s.version.to_s }
   s.source_files  = 'FRDLivelyButton'
