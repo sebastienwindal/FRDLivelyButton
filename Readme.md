@@ -9,9 +9,8 @@ used in navigation bar, and will nicely animate any button type changes and touc
 
 ## Requirements
 
-`FRDLivelyButton` uses ARC and requires iOS 7.0+.
+`FRDLivelyButton` uses ARC and requires iOS 6.1+.
 
-It probably will work with iOS 6, I have not tried but AFAIK it is not using any iOS7 specific APIs.
 
 ## Installation
 

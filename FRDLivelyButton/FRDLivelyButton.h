@@ -3,7 +3,7 @@
 //  FRDLivelyButton
 //
 //  Created by Sebastien Windal on 2/24/14.
-//
+//  MIT license. See the LICENSE file distributed with this work.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,7 +14,13 @@ typedef enum {
     kFRDLivelyButtonStyleClose,
     kFRDLivelyButtonStylePlus,
     kFRDLivelyButtonStyleCirclePlus,
-    kFRDLivelyButtonStyleCircleClose
+    kFRDLivelyButtonStyleCircleClose,
+    kFRDLivelyButtonStyleCaretUp,
+    kFRDLivelyButtonStyleCaretDown,
+    kFRDLivelyButtonStyleCaretLeft,
+    kFRDLivelyButtonStyleCaretRight,
+    kFRDLivelyButtonStyleArrowLeft,
+    kFRDLivelyButtonStyleArrowRight
 } kFRDLivelyButtonStyle;
 
 @interface FRDLivelyButton : UIButton

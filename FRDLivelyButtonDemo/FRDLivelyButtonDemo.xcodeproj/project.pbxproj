@@ -21,7 +21,7 @@
 		28D28FBB18BDA8C10003B595 /* FRDLivelyButtonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D28FBA18BDA8C10003B595 /* FRDLivelyButtonDemoTests.m */; };
 		28D28FC718BDA95E0003B595 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D28FC418BDA95E0003B595 /* Storyboard.storyboard */; };
 		28D28FC818BDA95E0003B595 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D28FC618BDA95E0003B595 /* TestViewController.m */; };
-		28D28FCC18BDA98F0003B595 /* FRDLivelyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D28FCB18BDA98F0003B595 /* FRDLivelyButton.m */; };
+		28ECDD5618C8B02700051E90 /* FRDLivelyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECDD5518C8B02700051E90 /* FRDLivelyButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		28D28FC418BDA95E0003B595 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		28D28FC518BDA95E0003B595 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		28D28FC618BDA95E0003B595 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		28D28FCA18BDA98F0003B595 /* FRDLivelyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRDLivelyButton.h; sourceTree = "<group>"; };
-		28D28FCB18BDA98F0003B595 /* FRDLivelyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRDLivelyButton.m; sourceTree = "<group>"; };
+		28ECDD5418C8B02700051E90 /* FRDLivelyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FRDLivelyButton.h; path = ../../FRDLivelyButton/FRDLivelyButton.h; sourceTree = "<group>"; };
+		28ECDD5518C8B02700051E90 /* FRDLivelyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FRDLivelyButton.m; path = ../../FRDLivelyButton/FRDLivelyButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 		28D28FC918BDA96C0003B595 /* FRDLivelyButton */ = {
 			isa = PBXGroup;
 			children = (
-				28D28FCA18BDA98F0003B595 /* FRDLivelyButton.h */,
-				28D28FCB18BDA98F0003B595 /* FRDLivelyButton.m */,
+				28ECDD5418C8B02700051E90 /* FRDLivelyButton.h */,
+				28ECDD5518C8B02700051E90 /* FRDLivelyButton.m */,
 			);
 			name = FRDLivelyButton;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D28FC818BDA95E0003B595 /* TestViewController.m in Sources */,
-				28D28FCC18BDA98F0003B595 /* FRDLivelyButton.m in Sources */,
+				28ECDD5618C8B02700051E90 /* FRDLivelyButton.m in Sources */,
 				28D28FA618BDA8C00003B595 /* AppDelegate.m in Sources */,
 				28D28FA218BDA8C00003B595 /* main.m in Sources */,
 			);
