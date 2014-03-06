@@ -20,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet FRDLivelyButton *closeCircleButton;
 @property (weak, nonatomic) IBOutlet FRDLivelyButton *upCaretButton;
 @property (weak, nonatomic) IBOutlet FRDLivelyButton *downCaretButton;
+@property (weak, nonatomic) IBOutlet FRDLivelyButton *leftCaretButton;
+@property (weak, nonatomic) IBOutlet FRDLivelyButton *rightCaretButton;
+@property (weak, nonatomic) IBOutlet FRDLivelyButton *leftArrowButton;
+@property (weak, nonatomic) IBOutlet FRDLivelyButton *rightArrowButton;
 
 @end
 
@@ -49,6 +53,10 @@
     [self.closeCircleButton setStyle:kFRDLivelyButtonStyleCircleClose animated:NO];
     [self.upCaretButton setStyle:kFRDLivelyButtonStyleCaretUp animated:NO];
     [self.downCaretButton setStyle:kFRDLivelyButtonStyleCaretDown animated:NO];
+    [self.leftCaretButton setStyle:kFRDLivelyButtonStyleCaretLeft animated:NO];
+    [self.rightCaretButton setStyle:kFRDLivelyButtonStyleCaretRight animated:NO];
+    [self.leftArrowButton setStyle:kFRDLivelyButtonStyleArrowLeft animated:NO];
+    [self.rightArrowButton setStyle:kFRDLivelyButtonStyleArrowRight animated:NO];
     
     [self.bigButton setStyle:kFRDLivelyButtonStyleClose animated:YES];
     [self.bigButton setOptions:@{kFRDLivelyButtonLineWidth: @(4.0f)}];
@@ -78,7 +86,7 @@
 
 - (IBAction)buttonAction:(FRDLivelyButton *)sender
 {
-    newStyle = (newStyle + 1) % 7;
+    newStyle = (newStyle + 1) % 11;
     
     [sender setStyle:newStyle animated:YES];
 }

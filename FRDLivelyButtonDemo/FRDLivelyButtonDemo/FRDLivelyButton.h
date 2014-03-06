@@ -16,7 +16,11 @@ typedef enum {
     kFRDLivelyButtonStyleCirclePlus,
     kFRDLivelyButtonStyleCircleClose,
     kFRDLivelyButtonStyleCaretUp,
-    kFRDLivelyButtonStyleCaretDown
+    kFRDLivelyButtonStyleCaretDown,
+    kFRDLivelyButtonStyleCaretLeft,
+    kFRDLivelyButtonStyleCaretRight,
+    kFRDLivelyButtonStyleArrowLeft,
+    kFRDLivelyButtonStyleArrowRight
 } kFRDLivelyButtonStyle;
 
 @interface FRDLivelyButton : UIButton
