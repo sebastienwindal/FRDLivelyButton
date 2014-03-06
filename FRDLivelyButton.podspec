@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FRDLivelyButton"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "Lively button."
   s.description  = "Simple UIButton subclass intended to be used inside a UIBarButtonItem. Supports common nav bar button types, nicely animates button type changes and touch events."
   s.homepage     = "http://github.com/sebastienwindal/FRDLivelyButton"
