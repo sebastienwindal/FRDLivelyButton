@@ -110,10 +110,10 @@
                         <outlet property="burgerButton" destination="MVJ-ex-Sx8" id="Byb-YM-WN3"/>
                         <outlet property="closeButton" destination="Eri-O2-1vs" id="owB-ms-KqD"/>
                         <outlet property="closeCircleButton" destination="WuS-Lu-38q" id="Epq-BG-QFD"/>
-                        <outlet property="downArrowButton" destination="JGa-di-8gl" id="mT2-Xx-e5E"/>
+                        <outlet property="downCaretButton" destination="JGa-di-8gl" id="a1B-0u-Qb4"/>
                         <outlet property="plusCircleButton" destination="Fnb-sA-OE9" id="O3C-0M-RGx"/>
                         <outlet property="plustButton" destination="79g-6E-ejR" id="MDm-rL-KaH"/>
-                        <outlet property="upArrowButton" destination="euH-tP-FHV" id="u0M-3K-lS8"/>
+                        <outlet property="upCaretButton" destination="euH-tP-FHV" id="VtK-OL-cYK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oJ-e2-Eor" userLabel="First Responder" sceneMemberID="firstResponder"/>

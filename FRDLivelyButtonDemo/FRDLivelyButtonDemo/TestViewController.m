@@ -18,8 +18,8 @@
 @property (weak, nonatomic) IBOutlet FRDLivelyButton *plusCircleButton;
 @property (weak, nonatomic) IBOutlet FRDLivelyButton *closeButton;
 @property (weak, nonatomic) IBOutlet FRDLivelyButton *closeCircleButton;
-@property (weak, nonatomic) IBOutlet FRDLivelyButton *upArrowButton;
-@property (weak, nonatomic) IBOutlet FRDLivelyButton *downArrowButton;
+@property (weak, nonatomic) IBOutlet FRDLivelyButton *upCaretButton;
+@property (weak, nonatomic) IBOutlet FRDLivelyButton *downCaretButton;
 
 @end
 
@@ -47,8 +47,8 @@
     [self.plustButton setStyle:kFRDLivelyButtonStylePlus animated:NO];
     [self.closeButton setStyle:kFRDLivelyButtonStyleClose animated:NO];
     [self.closeCircleButton setStyle:kFRDLivelyButtonStyleCircleClose animated:NO];
-    [self.upArrowButton setStyle:kFRDLivelyButtonStyleArrowUp animated:NO];
-    [self.downArrowButton setStyle:kFRDLivelyButtonStyleArrowDown animated:NO];
+    [self.upCaretButton setStyle:kFRDLivelyButtonStyleCaretUp animated:NO];
+    [self.downCaretButton setStyle:kFRDLivelyButtonStyleCaretDown animated:NO];
     
     [self.bigButton setStyle:kFRDLivelyButtonStyleClose animated:YES];
     [self.bigButton setOptions:@{kFRDLivelyButtonLineWidth: @(4.0f)}];
