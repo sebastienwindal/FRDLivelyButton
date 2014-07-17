@@ -16,7 +16,7 @@ used in navigation bar, and will nicely animate any button type changes and touc
 
 ### CocoaPods
 
-`pod 'FRDLivelyButton', '~> 1.1.2'`
+`pod 'FRDLivelyButton', '~> 1.1.3'`
 
 ### Manual
 
