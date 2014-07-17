@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "Lively button."
   s.description  = "Simple UIButton subclass intended to be used inside a UIBarButtonItem. Supports common nav bar button types, nicely animates button type changes and touch events."
   s.homepage     = "http://github.com/sebastienwindal/FRDLivelyButton"
-  s.screenshots  = "http://github.com/sebastienwindal/FRDLivelyButton/blob/master/Screenshot1.png"
+  s.screenshots  = "http://raw.githubusercontent.com/sebastienwindal/FRDLivelyButton/blob/master/images/screenshot.gif"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Sebastien Windal" => "sebastien@windal.net" }
   s.platform     = :ios, '6.1'
