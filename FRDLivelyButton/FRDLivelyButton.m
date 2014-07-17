@@ -311,7 +311,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
             circleAnim.duration = duration;
             circleAnim.fromValue = (__bridge id)self.circleLayer.path;
             circleAnim.toValue = (__bridge id)newCirclePath;
-            [circleAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            [circleAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
             [self.circleLayer addAnimation:circleAnim forKey:@"animateCirclePath"];
         }
         {
@@ -320,7 +320,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
             circleAlphaAnim.duration = duration;
             circleAlphaAnim.fromValue = @(self.circleLayer.opacity);
             circleAlphaAnim.toValue = @(newCircleAlpha);
-            [circleAlphaAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            [circleAlphaAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
             [self.circleLayer addAnimation:circleAlphaAnim forKey:@"animateCircleOpacityPath"];
         }
         {
@@ -329,7 +329,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
             line1Anim.duration = duration;
             line1Anim.fromValue = (__bridge id)self.line1Layer.path;
             line1Anim.toValue = (__bridge id)newLine1Path;
-            [line1Anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            [line1Anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
             [self.line1Layer addAnimation:line1Anim forKey:@"animateLine1Path"];
         }
         {
@@ -338,7 +338,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
             line1AlphaAnim.duration = duration;
             line1AlphaAnim.fromValue = @(self.line1Layer.opacity);
             line1AlphaAnim.toValue = @(newLine1Alpha);
-            [line1AlphaAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            [line1AlphaAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
             [self.line1Layer addAnimation:line1AlphaAnim forKey:@"animateLine1OpacityPath"];
         }
         {
@@ -347,7 +347,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
             line2Anim.duration = duration;
             line2Anim.fromValue = (__bridge id)self.line2Layer.path;
             line2Anim.toValue = (__bridge id)newLine2Path;
-            [line2Anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            [line2Anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
             [self.line2Layer addAnimation:line2Anim forKey:@"animateLine2Path"];
         }
         {
@@ -356,7 +356,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
             line3Anim.duration = duration;
             line3Anim.fromValue = (__bridge id)self.line3Layer.path;
             line3Anim.toValue = (__bridge id)newLine3Path;
-            [line3Anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            [line3Anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
             [self.line3Layer addAnimation:line3Anim forKey:@"animateLine3Path"];
         }
     }
@@ -392,7 +392,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
         anim.removedOnCompletion = NO;
         anim.fromValue = (__bridge id) layer.path;
         anim.toValue = (__bridge id) scaledPath;
-        [anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
         [layer addAnimation:anim forKey:nil];
         
         layer.path = scaledPath;
@@ -430,7 +430,8 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
         
         CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"path"];
         anim.duration = [[self valueForOptionKey:kFRDLivelyButtonUnHighlightAnimationDuration] floatValue];;
-        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
         anim.removedOnCompletion = NO;
 
         anim.values = values;
