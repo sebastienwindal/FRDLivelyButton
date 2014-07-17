@@ -445,6 +445,12 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
 
 -(void) dealloc
 {
+    for (CALayer* layer in [self.layer sublayers]) {
+        [layer removeAllAnimations];
+    }
     
+    [self.layer removeAllAnimations];
+    
+    self.shapeLayers = nil;
 }
 @end

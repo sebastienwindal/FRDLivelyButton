@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280FC36F19785F9B007137A6 /* ModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280FC36E19785F9B007137A6 /* ModalTestViewController.m */; };
 		28D28F9618BDA8C00003B595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D28F9518BDA8C00003B595 /* Foundation.framework */; };
 		28D28F9818BDA8C00003B595 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D28F9718BDA8C00003B595 /* CoreGraphics.framework */; };
 		28D28F9A18BDA8C00003B595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D28F9918BDA8C00003B595 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280FC36D19785F9B007137A6 /* ModalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalTestViewController.h; sourceTree = "<group>"; };
+		280FC36E19785F9B007137A6 /* ModalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalTestViewController.m; sourceTree = "<group>"; };
 		28D28F9218BDA8C00003B595 /* FRDLivelyButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRDLivelyButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D28F9518BDA8C00003B595 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28D28F9718BDA8C00003B595 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				28D28FC418BDA95E0003B595 /* Storyboard.storyboard */,
 				28D28FC518BDA95E0003B595 /* TestViewController.h */,
 				28D28FC618BDA95E0003B595 /* TestViewController.m */,
+				280FC36D19785F9B007137A6 /* ModalTestViewController.h */,
+				280FC36E19785F9B007137A6 /* ModalTestViewController.m */,
 				28D28FA718BDA8C00003B595 /* Images.xcassets */,
 				28D28F9C18BDA8C00003B595 /* Supporting Files */,
 				28D28FC918BDA96C0003B595 /* FRDLivelyButton */,
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280FC36F19785F9B007137A6 /* ModalTestViewController.m in Sources */,
 				28D28FC818BDA95E0003B595 /* TestViewController.m in Sources */,
 				28ECDD5618C8B02700051E90 /* FRDLivelyButton.m in Sources */,
 				28D28FA618BDA8C00003B595 /* AppDelegate.m in Sources */,
