@@ -100,6 +100,20 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
     self.centerPoint = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
 }
 
+-(void) setContentEdgeInsets:(UIEdgeInsets)contentEdgeInsets
+{
+    [super setContentEdgeInsets:contentEdgeInsets];
+    
+    double  width   = CGRectGetWidth(self.frame) - (self.contentEdgeInsets.left + self.contentEdgeInsets.right);
+    double  height  = CGRectGetHeight(self.frame) - (self.contentEdgeInsets.top + self.contentEdgeInsets.bottom);
+    
+    self.dimension = MIN(width, height);
+    self.offset = CGPointMake((CGRectGetWidth(self.frame) - self.dimension) / 2.0f,
+                              (CGRectGetHeight(self.frame) - self.dimension) / 2.0f);
+    
+    self.centerPoint = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+}
+
 -(void) setOptions:(NSDictionary *)options
 {
     _options = options;
