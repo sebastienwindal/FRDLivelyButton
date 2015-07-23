@@ -32,6 +32,7 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
 
 @property (nonatomic, strong) NSArray *shapeLayers;
 
+@property (nonatomic, assign) BOOL highlightGuardActivated;
 
 @end
 
@@ -60,7 +61,8 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
 
 -(void) commonInitializer
 {
-    
+    self.highlightGuardActivated = NO;
+
     self.line1Layer = [[CAShapeLayer alloc] init];
     self.line2Layer = [[CAShapeLayer alloc] init];
     self.line3Layer = [[CAShapeLayer alloc] init];
@@ -86,9 +88,12 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
     
     
     [self addTarget:self action:@selector(showHighlight) forControlEvents:UIControlEventTouchDown];
+    [self addTarget:self action:@selector(showHighlight) forControlEvents:UIControlEventTouchDragEnter];
+    [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchDragExit];
     [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchUpInside];
     [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchUpOutside];
-    
+    [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchCancel];
+
     // in case the button is not square, the offset will be use to keep our CGPath's centered in it.
     double  width   = CGRectGetWidth(self.frame) - (self.contentEdgeInsets.left + self.contentEdgeInsets.right);
     double  height  = CGRectGetHeight(self.frame) - (self.contentEdgeInsets.top + self.contentEdgeInsets.bottom);
@@ -377,6 +382,12 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
 // animate button pressed event.
 -(void) showHighlight
 {
+    if (_highlightGuardActivated == YES) {
+      return;
+    }
+
+    _highlightGuardActivated = YES;
+
     float highlightScale = [[self valueForOptionKey:kFRDLivelyButtonHighlightScale] floatValue];
     
     [self.shapeLayers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -403,6 +414,12 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
 // animate button release events i.e. touch up inside or outside.
 -(void) showUnHighlight
 {
+    if (_highlightGuardActivated == NO) {
+      return;
+    }
+
+    _highlightGuardActivated = NO;
+
     float unHighlightScale = 1/[[self valueForOptionKey:kFRDLivelyButtonHighlightScale] floatValue];
 
     [self.shapeLayers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
