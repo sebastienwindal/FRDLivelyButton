@@ -86,9 +86,12 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
     
     
     [self addTarget:self action:@selector(showHighlight) forControlEvents:UIControlEventTouchDown];
+    [self addTarget:self action:@selector(showHighlight) forControlEvents:UIControlEventTouchDragEnter];
+    [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchDragExit];
     [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchUpInside];
     [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchUpOutside];
-    
+    [self addTarget:self action:@selector(showUnHighlight) forControlEvents:UIControlEventTouchCancel];
+
     // in case the button is not square, the offset will be use to keep our CGPath's centered in it.
     double  width   = CGRectGetWidth(self.frame) - (self.contentEdgeInsets.left + self.contentEdgeInsets.right);
     double  height  = CGRectGetHeight(self.frame) - (self.contentEdgeInsets.top + self.contentEdgeInsets.bottom);
