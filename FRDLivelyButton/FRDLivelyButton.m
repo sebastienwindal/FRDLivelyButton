@@ -221,12 +221,28 @@ NSString *const kFRDLivelyButtonStyleChangeAnimationDuration = @"kFRDLivelyButto
         newLine2Path = [self createCenteredLineWithRadius:self.dimension/2.0f angle:+M_PI_2 offset:CGPointMake(0, 0)];
         newLine3Path = [self createCenteredLineWithRadius:self.dimension/2.0f angle:0 offset:CGPointMake(0, 0)];
         
+    } else if (style == kFRDLivelyButtonStyleMinus) {
+        newCirclePath = [self createCenteredCircleWithRadius:self.dimension/20.0f];
+        newCircleAlpha = 0.0f;
+        newLine1Path = [self createCenteredLineWithRadius:self.dimension/20.0f angle:0 offset:CGPointMake(0, 0)];
+        newLine1Alpha = 0.0f;
+        newLine2Path = [self createCenteredLineWithRadius:self.dimension/2.0f angle:0 offset:CGPointMake(0, 0)];
+        newLine3Path = [self createCenteredLineWithRadius:self.dimension/2.0f angle:0 offset:CGPointMake(0, 0)];
+        
     } else if (style == kFRDLivelyButtonStyleCirclePlus) {
         newCirclePath = [self createCenteredCircleWithRadius:self.dimension/2.0f];
         newCircleAlpha = 1.0f;
         newLine1Path = [self createCenteredLineWithRadius:self.dimension/20.0f angle:0 offset:CGPointMake(0, 0)];
         newLine1Alpha = 0.0f;
         newLine2Path = [self createCenteredLineWithRadius:self.dimension/2.0f/GOLDEN_RATIO angle:M_PI_2 offset:CGPointMake(0, 0)];
+        newLine3Path = [self createCenteredLineWithRadius:self.dimension/2.0f/GOLDEN_RATIO angle:0 offset:CGPointMake(0, 0)];
+        
+    } else if (style == kFRDLivelyButtonStyleCircleMinus) {
+        newCirclePath = [self createCenteredCircleWithRadius:self.dimension/2.0f];
+        newCircleAlpha = 1.0f;
+        newLine1Path = [self createCenteredLineWithRadius:self.dimension/20.0f angle:0 offset:CGPointMake(0, 0)];
+        newLine1Alpha = 0.0f;
+        newLine2Path = [self createCenteredLineWithRadius:self.dimension/2.0f/GOLDEN_RATIO angle:0 offset:CGPointMake(0, 0)];
         newLine3Path = [self createCenteredLineWithRadius:self.dimension/2.0f/GOLDEN_RATIO angle:0 offset:CGPointMake(0, 0)];
         
     } else if (style == kFRDLivelyButtonStyleClose) {
